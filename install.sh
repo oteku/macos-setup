@@ -25,7 +25,6 @@ brew cask install slack
 brew cask install spotify
 brew cask install visual-studio-code
 brew cask install vlc
-brew cask install zoom
 
 brew install asdf
 brew install balena-cli
@@ -49,15 +48,17 @@ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add python https://github.com/danhper/asdf-python.git
 
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+asdf install nodejs 12.18.0
+
 asdf install java latest
-asdf install nodejs latest
 asdf install ruby 2.4.5
 asdf install python 3.6.2
 asdf install python 2.7.13
 
 asdf global java latest
 . ~/.asdf/plugins/java/set-java-home.zsh
-asdf global nodejs latest
+asdf global nodejs 12.18.0
 asdf global ruby 2.4.5
 asdf global python 3.6.2 2.7.13
 
