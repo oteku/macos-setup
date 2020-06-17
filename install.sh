@@ -61,5 +61,8 @@ asdf global java latest
 asdf global nodejs 12.18.0
 asdf global ruby 2.4.5
 asdf global python 3.6.2 2.7.13
+echo "nodejs 12.18.0\n" >> $HOME/.tool-versions
+echo "ruby 2.4.5\n" >> $HOME/.tool-versions
+echo "python 3.6.\n" >> $HOME/.tool-versions
 
 npm i -g npm
