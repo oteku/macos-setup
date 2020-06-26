@@ -71,3 +71,6 @@ echo "ruby 2.4.5\n" >> $HOME/.tool-versions
 echo "python 3.6.\n" >> $HOME/.tool-versions
 
 npm i -g npm
+
+opam init
+opam switch create 4.10.0
