@@ -37,7 +37,12 @@ brew install opam
 brew install redis
 brew install rustup-init
 brew install sox
+brew install starship
 brew install zola
+
+echo 'eval "$(starship init zsh)"' >>  ~/.zshrc
+mkdir -p ~/.config && touch ~/.config/starship.toml
+echo 'add_newline = false\n\n[character]\nsymbol = "➜"\n[git_branch]\nsymbol = "🌱 "\n' >>  ~/.config/starship.toml
 
 echo ". $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
 
