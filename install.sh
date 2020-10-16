@@ -45,7 +45,7 @@ mkdir -p ~/.config && touch ~/.config/starship.toml
 echo 'add_newline = false\n\n[character]\nsymbol = "➜"\n[git_branch]\nsymbol = "🌱 "\n' >>  ~/.config/starship.toml
 
 echo ". $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
-
+export GNUPGHOME="bash /usr/local/opt/asdf/keyrings/nodejs" && mkdir -p "$GNUPGHOME" && chmod 0700 "$GNUPGHOME"
 asdf update
 
 asdf plugin-add java https://github.com/halcyon/asdf-java.git
@@ -54,6 +54,7 @@ asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add python https://github.com/danhper/asdf-python.git
 
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+bash /usr/local/opt/asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf install nodejs 12.18.0
 
 asdf install java latest
